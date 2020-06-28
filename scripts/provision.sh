@@ -116,7 +116,7 @@ done
 LOGGEDIN_USER=$(oc $ARG_OC_OPS whoami)
 OPENSHIFT_USER=${ARG_USERNAME:-$LOGGEDIN_USER}
 PRJ_SUFFIX=${ARG_PROJECT_SUFFIX:-`echo $OPENSHIFT_USER | sed -e 's/[-@].*//g'`}
-GITHUB_ACCOUNT=${GITHUB_ACCOUNT:-epe105}
+GITHUB_ACCOUNT=${GITHUB_ACCOUNT:-waynedovey}
 GITHUB_REF=${GITHUB_REF:-master}
 
 function deploy() {
@@ -259,6 +259,6 @@ END=`date +%s`
 echo "(Completed in $(( ($END - $START)/60 )) min $(( ($END - $START)%60 )) sec)"
 echo
 
-oc create -f https://raw.githubusercontent.com/epe105/application-templates/master/eap/eap70-image-stream.json -n=dev-$PRJ_SUFFIX
-oc create -f https://raw.githubusercontent.com/epe105/application-templates/master/eap/eap70-image-stream.json -n=stage-$PRJ_SUFFIX
-oc create -f https://raw.githubusercontent.com/epe105/application-templates/master/eap/eap70-image-stream.json -n=cicd-$PRJ_SUFFIX
+oc create -f https://raw.githubusercontent.com/waynedovey/application-templates/master/eap/eap70-image-stream.json -n=dev-$PRJ_SUFFIX
+oc create -f https://raw.githubusercontent.com/waynedovey/application-templates/master/eap/eap70-image-stream.json -n=stage-$PRJ_SUFFIX
+oc create -f https://raw.githubusercontent.com/waynedovey/application-templates/master/eap/eap70-image-stream.json -n=cicd-$PRJ_SUFFIX

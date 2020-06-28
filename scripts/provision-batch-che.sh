@@ -16,7 +16,7 @@ check-hostname
 
 for (( i = $begin; i <= $count; i++ )); do
  oc login "$hostname" --insecure-skip-tls-verify -u "$username${i}" -p "$password${i}"
- oc process -f https://raw.githubusercontent.com/epe105/minishift-addons/master/add-ons/che/templates/che-single-user.yml \
+ oc process -f https://raw.githubusercontent.com/waynedovey/minishift-addons/master/add-ons/che/templates/che-single-user.yml \
   --param PROJECT_NAME=$CICD_NAMESPACE \
   --param DOMAIN_NAME=$HOSTNAME \
   --param OPENSHIFT_OAUTH_TOKEN="$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" \
