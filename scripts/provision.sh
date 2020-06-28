@@ -259,6 +259,6 @@ END=`date +%s`
 echo "(Completed in $(( ($END - $START)/60 )) min $(( ($END - $START)%60 )) sec)"
 echo
 
-oc create -f https://raw.githubusercontent.com/waynedovey/application-templates/master/eap/eap70-image-stream.json -n=dev-$PRJ_SUFFIX
-oc create -f https://raw.githubusercontent.com/waynedovey/application-templates/master/eap/eap70-image-stream.json -n=stage-$PRJ_SUFFIX
-oc create -f https://raw.githubusercontent.com/waynedovey/application-templates/master/eap/eap70-image-stream.json -n=cicd-$PRJ_SUFFIX
+oc create -f https://raw.githubusercontent.com/waynedovey/devsecops-workshop/master/templates/eap70-image-stream.json -n=dev-$PRJ_SUFFIX
+oc create -f https://raw.githubusercontent.com/waynedovey/devsecops-workshop/master/templates/eap70-image-stream.json -n=stage-$PRJ_SUFFIX
+oc create -f https://raw.githubusercontent.com/waynedovey/devsecops-workshop/master/templates/eap70-image-stream.json -n=cicd-$PRJ_SUFFIX
