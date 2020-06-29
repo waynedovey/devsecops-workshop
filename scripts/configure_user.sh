@@ -8,7 +8,8 @@ if ! $(oc whoami &>/dev/null); then
  exit 1
 fi
 
-username="$(oc whoami)"
+#username="$(oc whoami)"
+username="admin"
 
 oc new-project dev-$username   --display-name="Tasks - Dev"
 oc new-project stage-$username --display-name="Tasks - Stage"
