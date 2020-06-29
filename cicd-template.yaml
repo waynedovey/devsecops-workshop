@@ -347,7 +347,7 @@ objects:
 
             cat <<EOF > /tmp/data.json
             {
-              "clone_addr": "https://github.com/waynedovey/openshift-tasks.git",
+              "clone_addr": "https://github.com/epe105/openshift-tasks",
               "uid": 1,
               "repo_name": "openshift-tasks"
             }
@@ -386,7 +386,7 @@ objects:
               cat /tmp/curl.log
               exit 255
             fi
-          image: openshift/origin:v3.9.0
+          image: openshift/origin:v3.11.0
           name: cicd-demo-installer-job
           resources: {}
           terminationMessagePath: /dev/termination-log
